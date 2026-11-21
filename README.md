@@ -71,6 +71,10 @@ A economia é uma decisão do agente C, não um atalho que pula contexto:
 
 `skills/craft-ui/references/anti-ai-slop.md` ataca os sintomas que geram o layout errado: faixa vazia no meio da página, pilha aleatória de seções, texto placeholder, gradientes padrão, cards todos iguais, fade-up em tudo, idioma errado e páginas longas sem conteúdo. Regra rápida: para cada seção, diga **qual pergunta ela responde, de onde veio e que conteúdo real contém** — se não der, ela é cortada antes do código.
 
+### Polir um site que já existe
+
+Quando o pedido é "essa landing está amadora", a skill não reconstrói: ela segue `skills/craft-ui/references/polish-existing-site.md`. O fluxo é **aditivo** (respeita alterações não commitadas), começa com screenshots antes/depois em 1440/768/390 e ataca sinais concretos: micro-tipografia, ritmo de seções apertado, hierarquia fraca e estados de carregamento/vazio/erro crus. A verificação usa os comandos do próprio projeto (build + testes) antes de declarar entrega.
+
 ### Padrão profissional
 
 `skills/craft-ui/references/quality-bar.md` é o definition of done: conteúdo real, fidelidade visual, responsividade em 1440/768/390, base WCAG AA (contraste, foco, semântica, reduced motion), performance/robustez e handoff limpo. O protocolo de verificação usa screenshots de página inteira — é assim que uma faixa vazia aparece. Vale para modo `terse` e `full`; a economia muda o quanto se fala, nunca o que é aceitável entregar.
@@ -181,6 +185,7 @@ craft-ui/
 │   │   ├── design-contract.md        # template de fusão + gate antes do código
 │   │   ├── anti-ai-slop.md           # sintomas e correções do layout genérico
 │   │   ├── quality-bar.md            # definition of done profissional + verificação
+│   │   ├── polish-existing-site.md   # fluxo aditivo para melhorar layout já publicado
 │   │   ├── categories.md             # baseline por categoria + slots de Style DNA
 │   │   ├── style-dna.md              # como ler uma referência (exige evidência)
 │   │   └── motion-and-effects.md     # efeitos Figma em CSS, GSAP e splash

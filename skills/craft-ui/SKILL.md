@@ -28,6 +28,7 @@ The failure this skill exists to prevent: a plausible-looking page made of rando
 - Capture the user's request **verbatim**; note any URL, attachment, "não quero" constraint and verbosity cues ("só o código", "rápido", "me explica").
 - Check what is available: subagent/Task tool, browser or web fetch, local repo, skills/MCP list.
 - If the request is a tiny tweak to an existing file (one color, one spacing value), tell the router — it may set `discovery: lite`. A new page or a redesign always gets `discovery: full`.
+- If the user says the existing layout is "amador", "precisa melhorar", "conserta essa landing" or points to a live site with code, read `references/polish-existing-site.md` and follow that path: additive polish of the real codebase, not a rebuild. Run `git status` before touching files.
 
 ### 1. Three discovery agents (run in parallel)
 Use your subagent tool — OpenCode `subagent`, Claude Code `Task`/`Agent`, Codex `spawn_agent`, Cursor background agent. If there is no subagent tool, run the three passes sequentially in the main agent and label each with its heading. **Discovery agents do not write code.**
@@ -90,6 +91,7 @@ Only call a skill when its phase applies. A static landing page does not need im
 - `references/design-contract.md` — merge template and hard gate.
 - `references/anti-ai-slop.md` — symptoms and fixes for generic, stacked, empty layouts.
 - `references/quality-bar.md` — professional definition of done and verification protocol.
+- `references/polish-existing-site.md` — additive workflow when the task is to elevate an existing production layout.
 - `references/categories.md` — genre baselines (minimum viability, not section menus).
 - `references/style-dna.md` — reference reading template; requires evidence.
 - `references/motion-and-effects.md` — CSS effects and GSAP recipes.

@@ -10,6 +10,7 @@ A layout is done only when all five groups pass.
 - [ ] Product name, language and voice come from Agent A/B, not from invention.
 - [ ] Every section in the spine carries real content from the content bank. No "Lorem", "Seu produto aqui", fake logos, invented metrics or testimonials.
 - [ ] One primary action; labels are specific ("Começar grátis" beats "Saiba mais" when the goal is signup).
+- [ ] Loading, empty and error states are designed (centered, padded, on-brand, with a clear retry), not bare text in a big box.
 - [ ] Copy is proofread in the product language; no English leftovers in a pt-BR UI.
 
 ### 2. Structure and visual fidelity
@@ -23,6 +24,7 @@ A layout is done only when all five groups pass.
 - [ ] 1440 / 768 / 390: no horizontal scroll, no clipped or overlapping text, no hidden primary action.
 - [ ] One `<h1>`; use `<header>`, `<main>`, `<section>`, `<footer>` appropriately; nav has a label.
 - [ ] Body text contrast ≥ 4.5:1, large text ≥ 3:1 against its **actual** background (including over gradients and blur).
+- [ ] Legibility floor: body copy 15–16 px, meaningful UI labels ≥ 11 px, footnotes/disclaimers ≥ 12 px. Micro-type is a defect, not a "dense" aesthetic.
 - [ ] Visible `:focus-visible` ring on every interactive element; full keyboard reachability.
 - [ ] Images have meaningful `alt` (or `alt=""` when decorative); icon-only buttons have `aria-label`.
 - [ ] Form controls have associated labels; status and errors are announced where applicable.

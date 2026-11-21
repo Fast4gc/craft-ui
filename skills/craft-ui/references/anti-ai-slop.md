@@ -15,6 +15,9 @@ Read this before the plan and again before the final screenshot. A layout can be
 | Emoji or generic icon-set look that does not match the reference | Default asset choice | Match the reference's icon stroke style, or use simple geometric marks built from tokens |
 | English labels inside a pt-BR product (or the reverse) | Language was never checked | Agent A reports the product language; all UI copy and the final reply follow it |
 | Tiny body text with enormous section padding | Airy-by-default density | Match the reference's density; keep body text readable (16px+ as a baseline); use the reference's scale, not a "premium" guess |
+| Micro-type: 8–11 px labels in previews, charts and footers | Looks like a screenshot shrunk to fit, not a product | Legibility floor: meaningful labels ≥ 11 px, footnotes ≥ 12 px, body 15–16 px. Only purely decorative mockup detail may be smaller |
+| Cramped sections (~50–70 px padding) on a 1440 canvas | No rhythm system; sections glued together | Use the project's section scale, typically 80–120 px desktop / 60–80 px mobile, consistently |
+| Raw "Carregando…" / "Nenhum plano disponível" as bare text in a large card | Empty states treated as an afterthought | Design them: centered, generous padding, soft/dashed border, matching radius and a retry action when applicable |
 | Long page for the sake of looking impressive | Length mistaken for completeness | Compare section count and word count with the reference; if the reference has four sections, do not ship nine |
 
 ## 30-second rejection test

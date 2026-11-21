@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+- **Polimento de site existente:** `polish-existing-site.md` com fluxo aditivo (respeita trabalho não commitado), checklist de sinais amadores (micro-tipografia, ritmo apertado, estados vazios crus) e verificação antes/depois.
+- Quality bar e anti-slop ganham piso de legibilidade (corpo 15–16 px, rótulos ≥ 11 px) e exigência de estados de carregamento/vazio/erro projetados.
+- Validado em produção real: landing do Hadix polida no CSS escopo, `npm run build` + 166 testes + 7 testes de SEO verdes.
+
 ## 0.2.0
 - **Descoberta em 3 agentes antes de qualquer código:** A analisa o site em produção, B decodifica o pedido e busca/analisa referências, C escolhe skills extras e define verbosidade/economia. Fallback sequencial quando não há subagents.
 - **Design Contract como gate obrigatório:** estrutura, conteúdo real e tokens com origem citada; pergunta quando falta informação em vez de inventar.
