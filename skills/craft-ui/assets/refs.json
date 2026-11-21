@@ -1,0 +1,41 @@
+{
+  "note": "Pinterest blocks automated fetching. Ask the user to attach these images. Style notes are filled into references/categories.md only after the images have actually been viewed.",
+  "saas-app": {
+    "label": "Anotamy SaaS",
+    "links": ["https://i.pinimg.com/1200x/c7/b4/3f/c7b43f4af0b4845101072b03d49ab0ad.jpg"]
+  },
+  "crm-dashboard": {
+    "label": "Create a CRM",
+    "links": [
+      "https://i.pinimg.com/1200x/a7/32/2a/a7322a0a4f4230b2c7e13d574363e721.jpg",
+      "https://payhip.com/UIForgekitss/blog/news/create-a-crm-that-feels-organized-at-a-glance-with-free-dashboard-ui-kits/"
+    ]
+  },
+  "landing-page": {
+    "label": "Landing page layouts",
+    "links": [
+      "https://i.pinimg.com/736x/f8/fa/91/f8fa91e5dfd0165729c762ce3f6c35ce.jpg",
+      "https://i.pinimg.com/1200x/9c/cd/59/9ccd59f52382d6eade6aa22ed81b8f3f.jpg",
+      "https://i.pinimg.com/736x/f5/06/fe/f506fe56c29fbe9b0d7fcba408eddff6.jpg",
+      "https://i.pinimg.com/736x/ee/19/bb/ee19bbede2df25d1c2ee287d85fa1a85.jpg"
+    ]
+  },
+  "figma-effects": {
+    "label": "Figma effects",
+    "links": [
+      "https://br.pinterest.com/pin/782430135307775494/",
+      "https://i.pinimg.com/1200x/ab/1b/23/ab1b2377a59850e14827d6b01517cc5d.jpg"
+    ]
+  },
+  "gsap-motion": {
+    "label": "GSAP effects",
+    "links": ["https://br.pinterest.com/pin/1125829606877714781/"]
+  },
+  "logo-splash": {
+    "label": "Logo splash",
+    "links": [
+      "https://i.pinimg.com/1200x/f0/22/aa/f022aab1df4aeb8b33c09db62e5226cb.jpg",
+      "https://br.pinterest.com/pin/771593348699606197/"
+    ]
+  }
+}

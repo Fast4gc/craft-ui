@@ -1,0 +1,11 @@
+{
+  "name": "craft-ui",
+  "owner": { "name": "Fast4gc" },
+  "plugins": [
+    {
+      "name": "craft-ui",
+      "source": "./",
+      "description": "Reference-to-layout design skill: SaaS, CRM, landing pages, Figma effects, GSAP motion, logo splash."
+    }
+  ]
+}
