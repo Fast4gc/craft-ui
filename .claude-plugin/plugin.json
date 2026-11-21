@@ -1,7 +1,7 @@
 {
   "name": "craft-ui",
   "description": "Reference- and context-driven layouts: three discovery agents (production site, request/references, skill/economy router) feed a Design Contract before any code. SaaS apps, CRM dashboards, landing pages, Figma effects, GSAP motion and logo splash screens.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": { "name": "Fast4gc" },
   "repository": "https://github.com/Fast4gc/craft-ui",
   "license": "MIT",

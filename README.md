@@ -67,6 +67,10 @@ A economia é uma decisão do agente C, não um atalho que pula contexto:
 - `full`: explicação completa, traits da referência citados e até 3 rodadas de verificação.
 - Só os arquivos de referência necessários são lidos; `discovery: lite` vale apenas para ajustes minúsculos em código existente, nunca para uma página nova — e mesmo assim o Design Contract encurta, nunca desaparece.
 
+### Anti-cópia de padrão
+
+`skills/craft-ui/references/pattern-transfer.md` ataca o erro mais caro: a skill ver um hero com glow lateral + grade de pontos + dock flutuante e replicar isso em qualquer produto. Agora **tokens de estilo são portáveis; composição não**. Cada padrão admitido entra no Design Contract com evidência do produto (agente A) **e** do pedido (agente B) — se o layout serviria para uma padaria ou um escritório de advocacia, ele é rejeitado.
+
 ### Anti "feito por IA"
 
 `skills/craft-ui/references/anti-ai-slop.md` ataca os sintomas que geram o layout errado: faixa vazia no meio da página, pilha aleatória de seções, texto placeholder, gradientes padrão, cards todos iguais, fade-up em tudo, idioma errado e páginas longas sem conteúdo. Regra rápida: para cada seção, diga **qual pergunta ela responde, de onde veio e que conteúdo real contém** — se não der, ela é cortada antes do código.
@@ -186,6 +190,7 @@ craft-ui/
 │   │   ├── anti-ai-slop.md           # sintomas e correções do layout genérico
 │   │   ├── quality-bar.md            # definition of done profissional + verificação
 │   │   ├── polish-existing-site.md   # fluxo aditivo para melhorar layout já publicado
+│   │   ├── pattern-transfer.md       # impede copiar o hero da referência sem contexto
 │   │   ├── categories.md             # baseline por categoria + slots de Style DNA
 │   │   ├── style-dna.md              # como ler uma referência (exige evidência)
 │   │   └── motion-and-effects.md     # efeitos Figma em CSS, GSAP e splash

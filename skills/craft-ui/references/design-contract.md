@@ -26,6 +26,9 @@ Sources: A = <site context> · B = <request/reference> · C = <routing>
    depth: elevation count __ and shadow recipe __
    motion: one moment — trigger __ property __ duration __ easing __
 6. Reference traits: take from <ref> ... · take from <ref> ... · leave behind ...
+   Pattern adoption ledger (see pattern-transfer.md):
+   - <trait/ingredient> — adopt | adapt | drop — A evidence: ... — B evidence: ...
+   Tokens (colors/type/radius/density) are portable; composition recipes are not.
 7. Effects: <which effect and why> (max one hero moment)
 8. Constraints: widths 1440 / 768 / 390 · a11y focus + reduced motion · stack <from project>
 9. Economy: verbosity <from C> · skills used <from C> · reference files to read <from C>
@@ -42,6 +45,7 @@ Before step 3 of `SKILL.md`, every box must be ticked:
 - [ ] Every token cites a source; `unknown` tokens were asked about, not guessed.
 - [ ] Copy is in the product's language and contains no invented brand, logo, metric or testimonial.
 - [ ] Conflicts between A, B and the reference were reported by the subagents, then resolved by the **main agent** asking the user (one consolidated message, max 3 questions), not averaged. Subagents never ask the user themselves.
+- [ ] Every adopted pattern has A + B evidence in the ledger; nothing was adopted because "the reference shows it". The composition would not fit an unrelated product.
 - [ ] C's verbosity and skill list are copied into block 9; no skill is run without a "why".
 
 If any box fails, go back to the briefs or ask the user. Never "just build something reasonable".

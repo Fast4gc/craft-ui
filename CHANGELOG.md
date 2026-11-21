@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2
+- **Anti-contaminação de arquétipo:** `pattern-transfer.md` impede que um hero de referência (glow lateral + grid + dock) seja transplantado para produtos sem relação. Tokens são portáveis; composição não.
+- Design Contract agora exige **Pattern adoption ledger** com evidência A + B por ingrediente (`adopt`/`adapt`/`drop`) e gate extra no SKILL.md.
+- Agentes A e B passam a declarar respectivamente o que o produto suporta e o que foi apenas observado na referência.
+
 ## 0.2.1
 - **Polimento de site existente:** `polish-existing-site.md` com fluxo aditivo (respeita trabalho não commitado), checklist de sinais amadores (micro-tipografia, ritmo apertado, estados vazios crus) e verificação antes/depois.
 - Quality bar e anti-slop ganham piso de legibilidade (corpo 15–16 px, rótulos ≥ 11 px) e exigência de estados de carregamento/vazio/erro projetados.

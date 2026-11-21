@@ -9,6 +9,7 @@ A layout is done only when all five groups pass.
 ### 1. Context and content
 - [ ] Product name, language and voice come from Agent A/B, not from invention.
 - [ ] Every section in the spine carries real content from the content bank. No "Lorem", "Seu produto aqui", fake logos, invented metrics or testimonials.
+- [ ] The composition is not a borrowed hero recipe: every adopted pattern cites product evidence (A) and request evidence (B) in the ledger, and would not fit an unrelated product. Kept only the portable style tokens.
 - [ ] One primary action; labels are specific ("Começar grátis" beats "Saiba mais" when the goal is signup).
 - [ ] Loading, empty and error states are designed (centered, padded, on-brand, with a clear retry), not bare text in a big box.
 - [ ] Copy is proofread in the product language; no English leftovers in a pt-BR UI.

@@ -25,7 +25,7 @@ Three agents run before any layout decision. Their job is to produce evidence, n
 **Procedure:**
 1. If a URL exists, fetch it (web fetch, then browser if the fetch is empty or JS-rendered). Record the final URL and whether access succeeded. Try the `www` variant once if needed. If there is no URL, inspect the local project (README, package.json, routes, existing pages, content files).
 2. Extract, with quotes where possible: official product name and one-line description; audience and job-to-be-done; primary action/conversion; current page structure in order (nav and section sequence); 5–10 real copy snippets (headlines, buttons, feature names, prices, footer labels); language and tone; visual tokens actually found (brand colors from CSS/screenshots, font families, logo treatment, imagery style); tech stack signals.
-3. Note constraints: anything that must stay (brand, legal text, nav) and anything broken or outdated you observed.
+3. Note constraints: anything that must stay (brand, legal text, nav) and anything broken or outdated you observed. Also state **which hero/section patterns the product genuinely supports** (e.g. "has a real dashboard worth showing" vs "no UI, text-only product") — this is the evidence that lets later phases reject a reference recipe that does not fit.
 4. Note gaps explicitly. A JS-only SPA you cannot read is a gap, not an invitation to guess.
 
 **Output (≤ 300 words):**
@@ -61,7 +61,8 @@ Gaps / missing info (report only): ...
    - **Only URLs** → attempt one fetch. Pinterest (`pinimg.com`, `pinterest.com`) usually blocks automated access; if it fails, report the gap in one sentence so the main agent can ask the user to attach the images. Never describe an unseen reference, and never substitute the category baseline while presenting it as the reference.
    - **No reference given** → when web search is available, search for 1–3 public references for the category (also check the links in `assets/refs.json`) and actually view them; report them as `found by search, not supplied by user` so the user can reject them. If no web tools are available or the results cannot be viewed, report a gap so the main agent can ask the user to attach images. Never present an unseen result as a reference.
    - **Several references** → assign roles (layout from A, color from B, motion from C) and state them. Do not average conflicting styles; pick one and say which.
-4. Write nothing that looks like a solution sketch. This brief is input only.
+4. Tag each Style DNA ingredient as `observed` and separate portable tokens from composition patterns. Do not mark a pattern as required just because the reference shows it — the main agent will decide adoption with Agent A's product evidence (see `references/pattern-transfer.md`).
+5. Write nothing that looks like a solution sketch. This brief is input only.
 
 **Output (≤ 350 words for the request brief, plus up to 100 words per reference DNA):**
 ```

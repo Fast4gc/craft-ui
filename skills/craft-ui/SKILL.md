@@ -41,12 +41,16 @@ Use your subagent tool — OpenCode `subagent`, Claude Code `Task`/`Agent`, Code
 
 Full specs, output schemas and word budgets: `references/agents.md`. Pass each agent the absolute skill-root path, its role spec, the user's raw request, and the URLs/attachments. Cap returns at their word budgets.
 
+When a reference image is involved, also read `references/pattern-transfer.md`. Style tokens travel; composition recipes do not. Never adopt a hero or section pattern from the reference alone — it must be justified by the product (A) and the request (B).
+
 ### 2. Design Contract — hard gate
 Read `references/design-contract.md`. Merge A + B + C into one contract. Then check:
 - [ ] Structure spine is ordered; each section has a job, a source, **a topology copied literally from the reference** and real content; there is no empty band.
 - [ ] Every token and copy line cites a source; unknowns are marked, not invented.
 - [ ] Conflicts between agents/site/reference were resolved by asking the user **one consolidated question** (max 3 items), not by guessing.
 - [ ] Verbosity and skill list come from C; no skill is run "just because it exists".
+- [ ] Pattern adoption ledger exists: every `adopt`/`adapt`/`drop` cites A and B; no hero/section recipe came from the reference alone (see `references/pattern-transfer.md`).
+- [ ] The composition would not be plausible for an unrelated product in a different field. Tokens are portable; the hero recipe is not.
 
 Discovery subagents never ask the user — they only report `Gaps` / `Unknowns`. The **main agent** collects all three briefs, asks one consolidated question (max 3 items) and keeps the gate closed until it is answered. If a material fact is still unknown (product name, audience, real content, reference image), ask and stop. Do not start step 3.
 
@@ -91,6 +95,7 @@ Only call a skill when its phase applies. A static landing page does not need im
 - `references/design-contract.md` — merge template and hard gate.
 - `references/anti-ai-slop.md` — symptoms and fixes for generic, stacked, empty layouts.
 - `references/quality-bar.md` — professional definition of done and verification protocol.
+- `references/pattern-transfer.md` — stops reference images from transplanting the same hero recipe into unrelated products.
 - `references/polish-existing-site.md` — additive workflow when the task is to elevate an existing production layout.
 - `references/categories.md` — genre baselines (minimum viability, not section menus).
 - `references/style-dna.md` — reference reading template; requires evidence.
