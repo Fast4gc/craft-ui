@@ -1,7 +1,7 @@
 ---
 name: craft-ui
 license: MIT
-description: Use whenever the user says 'no estilo dessa referência', 'faz um layout nesse estilo', 'conserta essa landing', 'olha o site em produção', shares Pinterest/Dribbble pins, screenshots or image links, or asks for a dashboard CRM, landing page, GSAP/Figma effect or logo splash — even if they never say 'skill'. Reference- and context-driven layouts: three discovery agents (production site, request/references, skill/economy router) feed a Design Contract before any code. SaaS apps, CRM dashboards, landing pages, Figma effects, GSAP motion, logo splash screens.
+description: "Use whenever the user says 'no estilo dessa referência', 'faz um layout nesse estilo', 'conserta essa landing', 'olha o site em produção', shares Pinterest/Dribbble pins, screenshots or image links, or asks for a dashboard CRM, landing page, GSAP/Figma effect or logo splash — even if they never say 'skill'. Reference- and context-driven layouts with three discovery agents (production site, request/references, skill/economy router) feeding a Design Contract before any code. SaaS apps, CRM dashboards, landing pages, Figma effects, GSAP motion, logo splash screens."
 ---
 
 # Craft UI
