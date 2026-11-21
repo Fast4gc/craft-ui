@@ -2,6 +2,8 @@
 
 Each section has a **genre baseline** (what this kind of screen needs to work, true regardless of style) and a **Reference DNA** slot. The baseline is never a substitute for the reference's actual look: once the user's images have been viewed, record their DNA in the slot so later runs start from it.
 
+Read this file **only for the categories selected by Agent B**, and only for viability. The baseline is a floor, not a section menu: a landing page does not have to contain every section listed here, and a section with no real content from the Design Contract gets cut. Baseline items must be justified by the brief or the reference — never by "that's how these pages are".
+
 Contents: saas-app · crm-dashboard · landing-page · figma-effects · gsap-motion · logo-splash
 
 ---

@@ -1,7 +1,7 @@
 {
   "name": "craft-ui",
-  "description": "Turn Pinterest/Dribbble-style references into built layouts: SaaS apps, CRM dashboards, landing pages, Figma-style effects, GSAP motion and logo splash screens.",
-  "version": "0.1.0",
+  "description": "Reference- and context-driven layouts: three discovery agents (production site, request/references, skill/economy router) feed a Design Contract before any code. SaaS apps, CRM dashboards, landing pages, Figma effects, GSAP motion and logo splash screens.",
+  "version": "0.2.0",
   "author": { "name": "Fast4gc" },
   "repository": "https://github.com/Fast4gc/craft-ui",
   "license": "MIT",

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0
+- **Descoberta em 3 agentes antes de qualquer código:** A analisa o site em produção, B decodifica o pedido e busca/analisa referências, C escolhe skills extras e define verbosidade/economia. Fallback sequencial quando não há subagents.
+- **Design Contract como gate obrigatório:** estrutura, conteúdo real e tokens com origem citada; pergunta quando falta informação em vez de inventar.
+- **Anti "feito por IA":** checklist de sintomas (faixa vazia, pilha de seções, placeholder, gradientes padrão, fade-up em tudo, idioma errado) e teste de rejeição por seção.
+- Style DNA agora exige `Evidence: seen` e fonte; categories.md deixa claro que o baseline é mínimo de viabilidade, não cardápio de seções.
+- Economia de tokens passa a ser decisão explícita do router (`terse`/`full`, leitura seletiva de referências, `discovery: lite` só para ajustes mínimos).
+- **Padrão profissional:** `quality-bar.md` com definition of done (conteúdo, fidelidade, responsividade, WCAG AA, performance, handoff) e protocolo de verificação com screenshots de página inteira; a economia nunca reduz os critérios de aceite.
+
 ## 0.1.0
 - First release of the `craft-ui` skill: reference intake (Style DNA), plan, build, visual verification.
 - Categories: SaaS app, CRM dashboard, landing page, Figma effects, GSAP motion, logo splash.

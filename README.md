@@ -15,7 +15,9 @@ Uma skill para agentes de código que lê o estilo de uma imagem e reconstrói e
 
 ## O que ela faz
 
-Você manda uma referência (print, pin, imagem) e pede "faz nesse estilo". A skill não copia pixels: extrai o **sistema de estilo** da imagem (paleta, tipografia, raios, sombras, densidade, grid, motion) e reconstrói com o **seu** conteúdo.
+Você manda uma referência (print, pin, imagem) e pede "faz nesse estilo" — ou só aponta o site em produção e pede para consertar a landing. A skill não copia pixels: extrai o **sistema de estilo** da imagem (paleta, tipografia, raios, sombras, densidade, grid, motion) e reconstrói com o **seu** conteúdo.
+
+Antes de escrever qualquer linha de código, ela roda **três agentes de descoberta**: um entende o site em produção, outro decodifica o pedido e busca/analisa referências, e o terceiro decide quais skills extras usar e o quanto falar. O resultado é um **Design Contract** — estrutura, conteúdo real e tokens com origem — que trava o layout e impede o resultado genérico ("feito por IA").
 
 | Categoria | Entrega |
 |---|---|
@@ -29,13 +31,49 @@ Você manda uma referência (print, pin, imagem) e pede "faz nesse estilo". A sk
 ### Fluxo
 
 ```
-referência ─► Style DNA ─► plano (tokens + wireframe) ─► código ─► screenshot e comparação ─► ajustes
+pedido do usuário + URL do site + referências
+        │
+        ├─► Agente A: site em produção ─► SITE CONTEXT BRIEF
+        ├─► Agente B: pedido + referências ─► REQUEST BRIEF + STYLE DNA
+        └─► Agente C: router de skills/economia ─► ROUTING DECISION
+        │
+        ▼
+DESIGN CONTRACT (gate: sem código antes dele)
+        ▼
+plano (tokens + wireframe) ─► código ─► screenshot e comparação ─► ajustes
 ```
 
-1. **Intake:** lê a imagem e escreve o "Style DNA". Se só houver link do Pinterest (que bloqueia leitura automática), a skill pede o print em vez de inventar.
-2. **Plano:** tokens (cor, tipo, raio, sombra, easing) e wireframe antes de qualquer componente.
-3. **Build:** HTML autocontido por padrão, responsivo (1440 / 768 / 390), com `prefers-reduced-motion` respeitado.
-4. **Verificação:** compara com a referência lado a lado e corrige as maiores diferenças primeiro.
+1. **Descoberta (3 agentes, em paralelo quando possível):** A lê o site em produção e o repo; B entende o pedido, busca referências quando não vieram nenhuma e escreve o Style DNA só do que realmente viu; C escolhe o mínimo de skills extras e define `terse` ou `full`.
+2. **Design Contract:** fusão dos três briefs. Cada seção tem um trabalho, uma origem e conteúdo real; cada token cita sua fonte. Se faltar informação, a skill pergunta — nunca inventa.
+3. **Plano:** tokens (cor, tipo, raio, sombra, easing) e wireframe antes de qualquer componente.
+4. **Build:** HTML autocontido por padrão, responsivo (1440 / 768 / 390), com `prefers-reduced-motion` respeitado e o checklist anti-IA aplicado.
+5. **Verificação:** compara com a referência e com o site lado a lado, exige conteúdo em toda a altura da página e corrige as maiores diferenças primeiro.
+
+### Os três agentes
+
+| Agente | O que ele responde | Entrega |
+|---|---|---|
+| **A — Produção** | Quem é o produto, para quem, o que diz hoje, qual é a ação principal e quais tokens já existem | `SITE CONTEXT BRIEF` (≤ 300 palavras) |
+| **B — Pedido e referência** | O que o usuário realmente quer, o que está fora de escopo, e como é a referência vista | `REQUEST BRIEF + STYLE DNA` (≤ 350 palavras + 100 por referência) |
+| **C — Router e economia** | Quais skills usar (e quais pular com motivo) e se a resposta será curta ou completa | `ROUTING DECISION` (≤ 200 palavras) |
+
+Especificações, schemas e orçamento de palavras: `skills/craft-ui/references/agents.md`. Sem ferramenta de subagent, os três passos rodam sequencialmente no próprio agente, com os mesmos cabeçalhos.
+
+### Economia de tokens
+
+A economia é uma decisão do agente C, não um atalho que pula contexto:
+
+- `terse` (padrão quando o usuário quer só o artefato): resposta final de 3–5 linhas e 1 rodada de verificação.
+- `full`: explicação completa, traits da referência citados e até 3 rodadas de verificação.
+- Só os arquivos de referência necessários são lidos; `discovery: lite` vale apenas para ajustes minúsculos em código existente, nunca para uma página nova — e mesmo assim o Design Contract encurta, nunca desaparece.
+
+### Anti "feito por IA"
+
+`skills/craft-ui/references/anti-ai-slop.md` ataca os sintomas que geram o layout errado: faixa vazia no meio da página, pilha aleatória de seções, texto placeholder, gradientes padrão, cards todos iguais, fade-up em tudo, idioma errado e páginas longas sem conteúdo. Regra rápida: para cada seção, diga **qual pergunta ela responde, de onde veio e que conteúdo real contém** — se não der, ela é cortada antes do código.
+
+### Padrão profissional
+
+`skills/craft-ui/references/quality-bar.md` é o definition of done: conteúdo real, fidelidade visual, responsividade em 1440/768/390, base WCAG AA (contraste, foco, semântica, reduced motion), performance/robustez e handoff limpo. O protocolo de verificação usa screenshots de página inteira — é assim que uma faixa vazia aparece. Vale para modo `terse` e `full`; a economia muda o quanto se fala, nunca o que é aceitável entregar.
 
 ## Instalação
 
@@ -107,13 +145,14 @@ Faz um dashboard de CRM nesse estilo [imagem]
 Landing page para um app de notas: estrutura da ref 1, cores da ref 3
 Splash do logo no estilo dessa ref, entrando no hero com GSAP
 Aplica esse efeito de vidro nos cards do meu painel
+Olha o site em produção em https://minhaempresa.com.br e conserta essa landing [print]
 ```
 
 Também dá para invocar direto: `/craft-ui` (Claude Code) ou "use a skill craft-ui" (Codex e outros).
 
 ## Skills que se combinam com ela
 
-A `craft-ui` usa estas skills **quando estão instaladas** e tem fallback embutido quando não estão.
+O agente C decide **por execução** quais destas skills usar e quais pular (com motivo). A `craft-ui` tem fallback embutido quando não estão instaladas.
 
 | Fase | Skill | Instalar |
 |---|---|---|
@@ -136,10 +175,14 @@ npx skills update                         # se instalou via npx skills
 ```
 craft-ui/
 ├── skills/craft-ui/
-│   ├── SKILL.md                      # fluxo e orquestração
+│   ├── SKILL.md                      # fluxo, gate do Design Contract e orquestração
 │   ├── references/
+│   │   ├── agents.md                 # 3 agentes: schemas, orçamento, prompts
+│   │   ├── design-contract.md        # template de fusão + gate antes do código
+│   │   ├── anti-ai-slop.md           # sintomas e correções do layout genérico
+│   │   ├── quality-bar.md            # definition of done profissional + verificação
 │   │   ├── categories.md             # baseline por categoria + slots de Style DNA
-│   │   ├── style-dna.md              # como ler uma referência
+│   │   ├── style-dna.md              # como ler uma referência (exige evidência)
 │   │   └── motion-and-effects.md     # efeitos Figma em CSS, GSAP e splash
 │   └── assets/refs.json              # links das referências
 ├── install.sh · install.ps1          # instaladores
