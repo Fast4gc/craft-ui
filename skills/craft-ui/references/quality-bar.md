@@ -13,7 +13,7 @@ A layout is done only when all five groups pass.
 - [ ] Copy is proofread in the product language; no English leftovers in a pt-BR UI.
 
 ### 2. Structure and visual fidelity
-- [ ] The section order matches the Design Contract spine; no trendy filler section was added.
+- [ ] The section order **and topology** match the Design Contract spine and the reference (rows stay rows, grid stays grid, split stays split); no trendy filler section was added.
 - [ ] No empty vertical band: content at every scroll position at 1440 and 390.
 - [ ] Radii, elevation count, density and spacing come from the Style DNA — not one global card style.
 - [ ] Palette limited to sampled tokens; no default purple/teal glow unless the reference shows it.

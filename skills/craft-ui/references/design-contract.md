@@ -13,7 +13,7 @@ Sources: A = <site context> · B = <request/reference> · C = <routing>
 1. Product & audience: ... (A; quote)
 2. Goal / primary action: ... (A+B; ONE action)
 3. Structure spine (ordered):
-   1) <section> — job: <question it answers> — source: <A current site / B reference / B request> — content: <real copy/data>
+   1) <section> — job: <question it answers> — source: <A current site / B reference / B request> — topology: <rows / grid / bento / split — copied literally from the reference> — content: <real copy/data>
    2) ...
    Cut rule: if a section has no job, no source or no content, remove it.
 4. Content bank (real strings, product language):
@@ -36,7 +36,8 @@ Sources: A = <site context> · B = <request/reference> · C = <routing>
 
 Before step 3 of `SKILL.md`, every box must be ticked:
 
-- [ ] Each spine section has a job, a source and real content (no placeholder section).
+- [ ] Each spine section has a job, a source, a **topology copied literally from the reference** and real content (no placeholder section). A row list must stay a row list; never swap it for a card grid because grids are more familiar.
+- [ ] The wireframe was checked against the reference at section level: same left/right split, same stacking direction, same divider treatment.
 - [ ] No empty band: the wireframe has content at every vertical position; spacing comes from the reference's rhythm, not from spacer divs.
 - [ ] Every token cites a source; `unknown` tokens were asked about, not guessed.
 - [ ] Copy is in the product's language and contains no invented brand, logo, metric or testimonial.

@@ -42,7 +42,7 @@ Full specs, output schemas and word budgets: `references/agents.md`. Pass each a
 
 ### 2. Design Contract — hard gate
 Read `references/design-contract.md`. Merge A + B + C into one contract. Then check:
-- [ ] Structure spine is ordered; each section has a job, a source and real content; there is no empty band.
+- [ ] Structure spine is ordered; each section has a job, a source, **a topology copied literally from the reference** and real content; there is no empty band.
 - [ ] Every token and copy line cites a source; unknowns are marked, not invented.
 - [ ] Conflicts between agents/site/reference were resolved by asking the user **one consolidated question** (max 3 items), not by guessing.
 - [ ] Verbosity and skill list come from C; no skill is run "just because it exists".

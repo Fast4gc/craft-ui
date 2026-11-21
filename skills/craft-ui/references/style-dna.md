@@ -4,7 +4,7 @@ Use this on every reference image before designing. Fill the template from what 
 
 ## How to look
 1. First impression in one line (mood, era, density).
-2. Structure: grid, columns, sidebar or none, section order, alignment.
+2. Structure: grid, columns, sidebar or none, section order, alignment. **Topology is literal**: say whether a group of items is a vertical list of rows (copy left + preview right), a side-by-side card grid, a bento, a 2-column split, etc. Do not normalize a row list into a card grid — that changes the design.
 3. Surfaces and depth: flat, bordered, shadowed, glass, layered. Count how many distinct elevation levels exist.
 4. Shape language: radius per element type (buttons, cards, inputs, avatars), not one global value.
 5. Color: sample 4 to 6 values (background, surface, text, muted text, accent, status). Estimate hex values and say they are estimated.
@@ -18,7 +18,7 @@ Use this on every reference image before designing. Fill the template from what 
 STYLE DNA: <reference name>
 Source: <attached image / file / url> · Evidence: seen | not seen
 Mood: ...
-Structure: ...
+Structure / topology: ... (rows, grid, bento, split — be literal)
 Surfaces / depth: ...
 Radius: buttons __ cards __ inputs __ pills __
 Color (estimated): bg #____ surface #____ text #____ muted #____ accent #____ status #____
